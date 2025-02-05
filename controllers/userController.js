@@ -39,14 +39,30 @@ exports.createUser = async (req, res) => {
     }
 };
 
+exports.getUser = async(req, res) => {
+    try {
+        const userId = jwt.decode(req.headers['authorization']);
+        if (!userId) {
+            return res.status(400).json({ message: 'User ID is required' });
+        }
+
+        const user = await User.findById(userId.user_id);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        res.json(user);
+    } catch(err) {
+        console.error(err);
+        res.status(500).json({ message: "Internal server error" });
+    }
+}
+
 exports.loginUser = async(req, res) => {
     try {
         const { email, password } = req.body;
-        console.log("Datos recibidos:", req.body);
 
         const user = await User.findOne({ email });
-        console.log("Datos user:", user);
-
         if (!user) {
             return res.status(400).json({ message: 'User not found' });
         }
@@ -72,3 +88,31 @@ function createToken(user) {
 
     return jwt.sign(payload, 'doble-electricidad');
 }
+
+exports.editUser = async (req, res) => {
+    try {
+        const { name, email, password, address } = req.body;
+
+        const userId = jwt.decode(req.headers['authorization']);
+        if (!userId) {
+            return res.status(400).json({ message: 'User ID is required' });
+        }
+
+        const user = await User.findById(userId.user_id);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
+
+        if (name) user.name = name;
+        if (email) user.email = email;
+        if (address) user.address = address;
+        if (password) {
+            user.password = await bcrypt.hash(password, 10);
+        }
+
+        const updatedUser = await user.save();
+        res.json({ message: 'User updated successfully', user: updatedUser });
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+};
