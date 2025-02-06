@@ -7,7 +7,7 @@ const { checkToken } = require('../utils/middleware');
 router.get('/users', userController.getAllUsers);
 
 // Return user
-router.get('/users/user', checkToken, userController.getAllUsers);
+router.get('/users/user', checkToken, userController.getUser);
 
 // Create a new user
 router.post('/users', userController.createUser);
