@@ -1,10 +1,56 @@
 [{
-    "_id": {
-      "$oid": "6163e13a8f7211a198e4c66a"
-    },
-    "name": "Example User",
-    "email": "user@example.com",
-    "password": "password123",
-    "date_signup": "03-02-2025",
-    "address": "User address"
+  "_id": {
+    "$oid": "67a0f1c5314ab41c207e5e1f"
+  },
+  "name": "admin",
+  "email": "admin@gmail.com",
+  "password": "$2a$10$fkINRxI1Jzff4fqu0PcPz.rOPds8MN5uyJHQWtKq8VzTmDArbaTN6",
+  "date_signup": {
+    "$date": "2025-02-03T16:41:41.818Z"
+  },
+  "address": "admin address",
+  "admin": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a5212bd46820c438810dba"
+  },
+  "name": "Laura Martínez",
+  "email": "laura.martinez@example.com",
+  "password": "$2a$10$PrObVx7zUjWEyZgrTudZGenScfZf7AA0ZRGpaldSQxmrCviNwyxoG",
+  "date_signup": {
+    "$date": "2025-02-06T20:52:59.662Z"
+  },
+  "address": "Calle Gran Vía 45, Madrid",
+  "admin": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a5213dd46820c438810dbd"
+  },
+  "name": "Carlos López",
+  "email": "carlos.lopez@example.com",
+  "password": "$2a$10$MWy.N.7Ac1huas4CzjH5GOzNZFr/HVxq9Q0eGpGMl0PmL.Hdpd3.G",
+  "date_signup": {
+    "$date": "2025-02-06T20:53:17.627Z"
+  },
+  "address": "Avenida Diagonal 210, Barcelona",
+  "admin": false,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a5214dd46820c438810dc0"
+  },
+  "name": "Ana Rodríguez",
+  "email": "ana.rodriguez@example.com",
+  "password": "$2a$10$Ro2f7Gvnq4uyudbRUnh1mu2IKePqIKUumw2m.IR3iSdLY4Hjs1Vte",
+  "date_signup": {
+    "$date": "2025-02-06T20:53:33.745Z"
+  },
+  "address": "Calle Mayor 12, Valencia",
+  "admin": false,
+  "__v": 0
 }]

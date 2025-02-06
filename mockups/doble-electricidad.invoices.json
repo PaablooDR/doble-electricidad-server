@@ -1,0 +1,105 @@
+[{
+  "_id": {
+    "$oid": "67a0f50d1e82cc4b275f680d"
+  },
+  "holder_name": "Invoice-001",
+  "date": {
+    "$date": "2025-02-03T16:55:41.677Z"
+  },
+  "amount": 150,
+  "address": "admin address",
+  "user": {
+    "$oid": "67a5212bd46820c438810dba"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a106721e82cc4b275f6812"
+  },
+  "holder_name": "Invoice-002",
+  "date": {
+    "$date": "2025-02-03T18:09:54.604Z"
+  },
+  "amount": 250,
+  "address": "admin address",
+  "user": {
+    "$oid": "67a5214dd46820c438810dc0"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a1067a1e82cc4b275f6814"
+  },
+  "holder_name": "Invoice-003",
+  "date": {
+    "$date": "2025-02-03T18:10:02.872Z"
+  },
+  "amount": 2500,
+  "address": "admin address",
+  "user": {
+    "$oid": "67a5214dd46820c438810dc0"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a106841e82cc4b275f6816"
+  },
+  "holder_name": "Invoice-004",
+  "date": {
+    "$date": "2025-02-03T18:10:12.950Z"
+  },
+  "amount": 1000,
+  "address": "admin address",
+  "user": {
+    "$oid": "67a5212bd46820c438810dba"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a524395a6bc16c5f5818b6"
+  },
+  "holder_name": "Invoice-005",
+  "date": {
+    "$date": "2025-02-06T21:06:01.489Z"
+  },
+  "amount": 150.75,
+  "address": "Calle Gran Vía 45, Madrid",
+  "user": {
+    "$oid": "67a5213dd46820c438810dbd"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a5245e5a6bc16c5f5818b8"
+  },
+  "holder_name": "Invoice-006",
+  "date": {
+    "$date": "2025-02-06T21:06:38.086Z"
+  },
+  "amount": 320.5,
+  "address": "Avenida Diagonal 210, Barcelona",
+  "user": {
+    "$oid": "67a5213dd46820c438810dbd"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a5246f5a6bc16c5f5818ba"
+  },
+  "holder_name": "Invoice-007",
+  "date": {
+    "$date": "2025-02-06T21:06:55.696Z"
+  },
+  "amount": 98.25,
+  "address": "Calle Mayor 12, Valencia",
+  "user": {
+    "$oid": "67a5213dd46820c438810dbd"
+  },
+  "__v": 0
+}]
