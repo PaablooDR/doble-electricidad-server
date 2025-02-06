@@ -7,6 +7,6 @@ const { checkToken } = require('../utils/middleware');
 router.get('/invoices', invoiceController.getAllInvoices);
 
 // Create a new invoice
-router.post('/invoices', invoiceController.createInvoice);
+router.post('/invoices', checkToken, invoiceController.createInvoice);
 
 module.exports = router;

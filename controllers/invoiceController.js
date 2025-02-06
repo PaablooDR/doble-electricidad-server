@@ -13,13 +13,19 @@ exports.getAllInvoices = async (req, res) => {
 
 exports.createInvoice = async (req, res) => {
     try {
+        const userId = jwt.decode(req.headers['authorization']);
+        if (!userId) {
+            return res.status(400).json({ message: 'User ID is required' });
+        }
+
         const { holder_name, date, amount, address } = req.body;
 
         const newInvoice = new Invoice({
             holder_name,
             date: new Date(),
             amount,
-            address
+            address,
+            user: userId.user_id
         });
 
         const savedInvoice = await newInvoice.save();

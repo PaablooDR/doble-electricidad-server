@@ -28,7 +28,8 @@ exports.createUser = async (req, res) => {
             email,
             password: hashedPassword,
             date_signup: new Date(),
-            address
+            address,
+            admin: false
         });
 
         const savedUser = await newUser.save();
@@ -70,6 +71,10 @@ exports.loginUser = async(req, res) => {
         const isMatch = await bcrypt.compareSync(password, user.password);
         if (!isMatch) {
             return res.status(400).json({ message: 'Incorrect password' });
+        }
+
+        if (!user.admin) {
+            return res.status(403).json({ message: 'Access denied. Admins only' });
         }
 
         res.status(200).json({ 
